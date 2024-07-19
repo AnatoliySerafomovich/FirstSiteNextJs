@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text-shadow{ 
+    &-white{        text-shadow: 0px 3px white; }
+    &-dark{         text-shadow: 0px 3px #2D3436; }
+    &-black{        text-shadow: 0px 3px black; }
+    &-yellow{       text-shadow: 0px 3px #FFEAA7; }
+    &-purple{       text-shadow: 0px 3px #6C5CE7; }
+    &-gray{         text-shadow: 0px 3px #00000030; }
+    &-graysoft{     text-shadow: 0px 3px #C2C2C224; }
+    &-yellowdark{   text-shadow: 0px 3px #FDCB6E; }
+}
