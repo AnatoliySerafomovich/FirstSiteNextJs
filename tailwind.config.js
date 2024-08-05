@@ -1,38 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
+    extend: {  
+      gridTemplateRows:{
+        container:"auto 1fr auto",
+      },
       gridTemplateColumns:{
-        wrapper:"1fr minmax(auto,1200px) 1fr"
-      },     
+        layout:"1fr 1fr",
+        wrapper:"1fr 2fr",
+        body:"4fr 2fr"
+      },
+      boxShadow:{
+        "button":"0px 8px 24px 5px #EA7C6940",
+        "loading":"0px 8px 24px 5px #9ca3af40",
+        "sideLink":"0px 8px 24px #9ca3af32",
+        topLink:"6px 5px 0px 2px #252836",
+        bottomLink:"6px -2px 0px 2px #252836",
+      }, 
+      colors:{
+        "primary":"#EA7C69",
+      }  
     },
-    colors:{
-      "black":"#2D3436",
-      "purple":"#6C5CE7",
-      "gray":"#00000030",
-      "yellow":"#FFEAA7",
-      "graysoft":"#C2C2C224",
-      "yellowdark":"#FDCB6E",
-      "white":"#FFFFFF",
-      "pink":"#E84393",
-      "blue":"#0984E3",
-      "green":"#00B894",
-      
-    },
-    fontWeight:{
-      "400":"400",
-      "700":"700",
-      "800":"800",
-      "900":"900",
-    }
+    
   },
   plugins: [],
 }
