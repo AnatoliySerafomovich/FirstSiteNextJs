@@ -7,11 +7,13 @@ module.exports = {
     extend: {  
       gridTemplateRows:{
         container:"auto 1fr auto",
+        basket:"auto 1fr auto auto",
       },
       gridTemplateColumns:{
         layout:"1fr 1fr",
         wrapper:"1fr 2fr",
-        body:"4fr 2fr"
+        body:"4fr 2fr",
+        basketItem:"7fr 1fr 1fr"
       },
       boxShadow:{
         "button":"0px 8px 24px 5px #EA7C6940",
