@@ -1,6 +1,8 @@
 'use client'
-import FoodBlock from "./ui/FoodBlock"
-import ShopCard from "./ui/ShopCard"
+
+import FoodBlock from "./FoodBlock"
+import ShopCard from "./ShopCard"
+
 
 
 export default function HomePage(){

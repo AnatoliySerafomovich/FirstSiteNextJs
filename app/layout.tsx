@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="ru" >
       <body className="bg-[#252836]">
         <App>
-          <div className="flex  min-h-screen">
+          <div className="flex min-h-screen">
             <SideBar />
               {children}
           </div>

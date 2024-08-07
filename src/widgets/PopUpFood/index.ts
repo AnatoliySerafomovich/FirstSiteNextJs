@@ -1,0 +1,1 @@
+export {FoodPopUp } from "./ui/PopUp"

@@ -1,13 +1,15 @@
 'use client'
-import type { Food } from "@/entities/food";
+import { Food, usePopUpFoodStore} from "@/entities/food";
 import { StarIcon, UiSpinner } from "@/shared/ui";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function FoodCard({food}:{food:Food}){
+    const {setVisible,setSelect} = usePopUpFoodStore() 
     return(
-        <div className="bg-[#1F1D2B] relative auto-rows-max content-end place-content-center grid p-[24px]  rounded-[16px] cursor-pointer">
+        <div className="bg-[#1F1D2B] relative auto-rows-max content-end place-content-center grid p-[24px]  rounded-[16px] cursor-pointer"
+            onClick={()=>{setVisible(true);setSelect(food)}}>
             <div className="h-[90px]"></div>
             <Preview src={food.images[0]} />
             <div className="text-white text-lg text-center font-medium">{food.title}</div>
