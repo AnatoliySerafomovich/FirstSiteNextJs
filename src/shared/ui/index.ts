@@ -6,6 +6,7 @@ export { Logo as UiLogo} from "./Logo";
 export { RadioField as UiRadioField} from "./RadioField";
 export { Spinner as UiSpinner} from "./Spinner"
 export { PageSpinner as UiPageSpinner} from "./PageSpinner"
+export { PopUp as UiPopUp} from "./PopUp"
 export {LoadText as UiLoadText} from "./LoadText"
 export {default as AboutUsIcon} from "@/public/about_us.svg"
 export {default as HomeIcon} from "@/public/home.svg"

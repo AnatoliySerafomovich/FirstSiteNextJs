@@ -6,7 +6,7 @@ import ShopCard from "./ui/ShopCard"
 export default function HomePage(){
 
     return(
-        <div className="grid grid-cols-body w-full relative overflow-hidden h-screen">
+        <div className="grid grid-cols-body w-full overflow-hidden h-screen">
             <FoodBlock />
             <ShopCard />
         </div>

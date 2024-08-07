@@ -12,7 +12,7 @@ module.exports = {
       gridTemplateColumns:{
         layout:"1fr 1fr",
         wrapper:"1fr 2fr",
-        body:"4fr 2fr",
+        body:"2fr 1fr",
         basketItem:"7fr 1fr 1fr"
       },
       boxShadow:{
