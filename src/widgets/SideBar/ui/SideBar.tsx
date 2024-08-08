@@ -1,5 +1,5 @@
 'use client'
-import { DiscountIcon, GraphIcon, HomeIcon, LogoutIcon, MessageIcon, NotificationIcon, SettingIcon, UiLogo } from "@/shared/ui";
+import { DiscountIcon, GraphIcon, HomeIcon, LoginIcon, LogoutIcon, MessageIcon, NotificationIcon, SettingIcon, UiLogo } from "@/shared/ui";
 import { SideLink } from "./SideLink";
 
 export function SideBar(){
@@ -24,8 +24,11 @@ export function SideBar(){
             <SideLink href="/home5">
                 <SettingIcon className="w-5 h-5"/>
             </SideLink>
-            <SideLink href="/home6">
+            <SideLink href="/signout">
                 <LogoutIcon className="w-5 h-5"/>
+            </SideLink>
+            <SideLink href="/login">
+                <LoginIcon className="w-5 h-5"/>
             </SideLink>
         </div>
     )

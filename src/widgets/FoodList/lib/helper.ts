@@ -4,3 +4,6 @@ export function isSrollDown(currenEvent: EventTarget & HTMLDivElement,maxDown:nu
     }
     return false
 }
+export function isScrolling(currenEvent: HTMLDivElement){
+    return currenEvent.scrollHeight  != currenEvent.clientHeight
+}

@@ -14,7 +14,7 @@ export function ListBasket(){
                 <div className="text-[16px] text-white font-semibold">Price</div>
             </div>
             <div className="relative grid gap-[25px]">
-            {isLoading ? <UiPageSpinner className="py-2 bg-transparent"/> : data ? data.products.map(e=><Suspense fallback={<LoadItem/>}><Item item={e} key={e.id}/></Suspense>) : <div className="text-lg text-white font-semibold">Not Found</div>}
+            {isLoading ? <UiPageSpinner className="py-2 bg-transparent"/> : data ? data.products.map(e=><Suspense fallback={<LoadItem />} key={e.id}><Item item={e} key={e.id}/></Suspense>) : <div className="text-lg text-white font-semibold">Not Found</div>}
             </div>
         </div>
     )

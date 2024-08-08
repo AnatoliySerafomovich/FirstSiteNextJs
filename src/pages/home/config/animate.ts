@@ -1,8 +1,8 @@
 export const PopUpAnimation = {
     hidden:{
-        opacity:0
+        width:0,
     },
     visible:{
-        opacity:100
+        width:"33%",
     }
 }

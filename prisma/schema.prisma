@@ -16,6 +16,7 @@ model User {
   confirm    Boolean
   wallet     Int      @default(0)
   favoritId  Int[]
+  basket     Int[]
 }
 
 enum Role {

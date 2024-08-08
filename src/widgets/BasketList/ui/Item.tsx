@@ -23,7 +23,7 @@ export default function Item({item}:{item:Food}){
                 ${item.price}
             </div>
             <div className="col-start-1 col-end-3 h-full">
-                <UiInputField placeholder="Please, just a little bit spicy only." about="" className="w-full h-full text-lg"/>
+                <UiInputField props={{placeholder:"Order Note...",about:"",className:"w-full h-full text-lg"}}/>
             </div>
             <DeleteBasketItem />
         </div>

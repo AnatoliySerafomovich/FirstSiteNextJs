@@ -1,5 +1,6 @@
 'use client'
 import { Food, usePopUpFoodStore} from "@/entities/food";
+import { AddBasketFood } from "@/features/add-basket-food";
 import { StarIcon, UiSpinner } from "@/shared/ui";
 import clsx from "clsx";
 import Image from "next/image";
@@ -15,6 +16,7 @@ export default function FoodCard({food}:{food:Food}){
             <div className="text-white text-lg text-center font-medium">{food.title}</div>
             <div className="text-white text-sm text-center ">${food.price}</div>
             <Rating rate={Math.floor(food.rating)}/>
+            <AddBasketFood id={food.id} className="absolute w-10 h-10 right-5 bottom-5"/>
         </div>
     )
 }

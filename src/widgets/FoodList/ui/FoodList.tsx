@@ -1,15 +1,21 @@
 'use client'
 import { SelectDine } from "@/features/SelectDine";
 import { UiSpinner } from "@/shared/ui";
-import { lazy, Suspense, UIEvent, useCallback, useEffect, useState } from "react";
+import { lazy, Suspense, UIEvent, useCallback, useEffect, useRef, useState } from "react";
 import { Food, useFoodSkip } from "@/entities/food";
 import { LoadCard } from "./LoadCard";
-import { isSrollDown } from "../lib/helper";
+import { isScrolling, isSrollDown } from "../lib/helper";
 const FoodCard = lazy(()=>import("./FoodCard"))
 export function FoodList(){
     const [skip,setSkip] = useState(0)
+    const ref = useRef<HTMLDivElement>(null)
     const {data,isLoading,isFetched} = useFoodSkip(skip)  
     const [loadData,setLoadData] = useState<Food[]>([])
+    useEffect(()=>{
+        if(data?.total! > skip*3 && !isScrolling(ref.current!)) {
+            setSkip(e=>e+=1)
+        }
+    },[data])
     useEffect(()=>{
         !isLoading && data!=undefined && setLoadData([...loadData,...data?.products!])
     },[isFetched])
@@ -20,7 +26,7 @@ export function FoodList(){
         }
     },[data])
     return(
-        <div className="flex flex-col gap-[22px] overflow-y-scroll pr-2" onScroll={onScroll}>
+        <div className="flex flex-col gap-[22px] overflow-y-scroll pr-2" onScroll={onScroll} ref={ref}>
             <div className="flex place-content-between items-center">
                 <div className="font-semibold text-[20px] text-white">Choose Dishes</div>
                 <SelectDine />

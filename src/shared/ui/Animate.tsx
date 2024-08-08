@@ -11,7 +11,7 @@ export function ViewAnimate({children,variants,visible,className}:Animate){
     return(
         <AnimatePresence>
             {(visible || visible==undefined )&&(
-                <motion.div variants={variants} className={className} initial="hidden" whileInView={"initial"}>
+                <motion.div variants={variants} transition={{ease:"backOut",duration:0.5}}  className={className} initial="hidden" whileInView="visible">
                     {children}
                 </motion.div>
             )}

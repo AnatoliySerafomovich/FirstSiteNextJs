@@ -6,16 +6,17 @@ type InputField = {
     errorField?:FieldError,
     before?:ReactNode,
     after?:ReactNode,
-} & InputHTMLAttributes<HTMLInputElement>
-export function InputField({...props}:InputField){
+    props: InputHTMLAttributes<HTMLInputElement>
+}
+export function InputField({after,before,errorField,props}:InputField){
     return(
         <label className="relative">
-            {props.before}
+            {before}
             <input {...props} className={clsx(props.className,"rounded-lg p-[14px] bg-[#2D303E] placeholder:text-[#889898] text-[#E0E6E9] text-sm")}/>
-            {props.errorField &&(
-                <div className="text-red-500 font-medium text-lg">{props.errorField.message}</div>
+            {errorField?.message &&(
+                <div className="text-red-500 font-medium text-lg">{errorField.message}</div>
             )}
-            {props.after}
+            {after}
         </label>
     )
 }
