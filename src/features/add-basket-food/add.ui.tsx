@@ -1,3 +1,4 @@
+'use client'
 import { BasketIcon } from "@/shared/ui";
 import clsx from "clsx";
 

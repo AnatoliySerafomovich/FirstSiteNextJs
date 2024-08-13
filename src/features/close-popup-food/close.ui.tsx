@@ -1,3 +1,4 @@
+'use client'
 import { usePopUpFoodStore } from "@/entities/food";
 import { BackIcon } from "@/shared/ui";
 import clsx from "clsx";

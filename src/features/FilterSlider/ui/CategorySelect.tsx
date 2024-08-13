@@ -1,3 +1,5 @@
+'use client'
+
 import clsx from "clsx"
 import { CategorySelectType } from "../model/types"
 import { useCategoryStore } from ".."

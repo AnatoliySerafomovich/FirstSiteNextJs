@@ -1,3 +1,4 @@
+import { GetUserByEmail } from "@/entities/user";
 import type { AuthOptions, User, } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
@@ -14,12 +15,12 @@ export const authConfig:AuthOptions ={
                 password:{label:"password",type:"password",required:true},
             },
             async authorize(credentials,req) {
-                // if (credentials?.email == null || credentials?.password == null) return null
-                // const user = await getUserByEmail(credentials.email!)
-                // if (user && user.password == credentials.password){
-                //     const {id,email,password,avatar,...other} = user
-                //     return {email,password,name:null,id:id.toString(),image:avatar} as User
-                // }
+                if (credentials?.email == null || credentials?.password == null) return null
+                const user = await GetUserByEmail(credentials.email!,true)
+                if (user && user.password == credentials.password){
+                    const {id,password,email,...other} = user
+                    return {email,password,name:null,id:id.toString(),image:""} as User
+                }
                 return null
             },
         })
@@ -29,5 +30,6 @@ export const authConfig:AuthOptions ={
         newUser:"/login",
         signOut:"/signOut",
         verifyRequest:"/confirm"
-    }
+    },
+    adapter:{}
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import { UiRadioField } from "@/shared/ui";
 import { useDeliveryStore } from "./Delivery.model";
 

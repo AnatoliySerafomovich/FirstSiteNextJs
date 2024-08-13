@@ -1,8 +1,7 @@
-'use client'
 import FoodBlock from "./FoodBlock"
 import ShopCard from "./ShopCard"
 
-export default function HomePage(){
+export default async function HomePage(){
 
     return(
         <div className="grid grid-cols-body w-full h-screen">

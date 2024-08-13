@@ -1,3 +1,4 @@
+'use client'
 import { usePopUpFoodStore } from "@/entities/food";
 import { Payment } from "@/features/Payment";
 import { UiPopUp, UiViewAnimate } from "@/shared/ui";

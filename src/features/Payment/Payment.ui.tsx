@@ -1,3 +1,5 @@
+'use client'
+
 import { UiButton } from "@/shared/ui";
 
 export function Payment(){

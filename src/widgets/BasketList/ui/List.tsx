@@ -1,3 +1,4 @@
+'use client'
 import { useFood } from "@/entities/food"
 import { UiPageSpinner } from "@/shared/ui"
 import { LoadItem } from "./LoadItem"

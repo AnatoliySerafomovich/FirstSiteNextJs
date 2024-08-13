@@ -1,3 +1,4 @@
+'use client'
 import { usePopUpFoodStore } from "@/entities/food"
 import { ClosePopup } from "@/features/close-popup-food"
 import { StarIcon, UiSpinner } from "@/shared/ui"
